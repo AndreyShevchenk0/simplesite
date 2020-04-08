@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная - Доска щбьявлений</title>
+    <title>{{ current_rubric.name }}- Доска обьявлений</title>
 </head>
 <body>
     <h2>Обьявления</h2>
+    <h3>Рубрика:{{ current_rubric.name }}</h3>
     <div>
-        <a href="{% url 'index' %}">Главная</a>
+        <a href="/bboard/">Главная</a>
         {% for rubric in rubrics %}
-        <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
-        {% endfor %}
+        <a href="/bboard/{{ rubric.pk }}/>"{{ rubric.name }}</a>
+        { endfor}
     </div>
     {% for bb in bbs %}
     <div>
         <h3>{{ bb.title }}</h3>
         <p>{{ bb.content }}</p>
-        <p><a href="/bboard/{{ bb.rubric.pk }}/">{{ bb.rubric.name }}</a></p>
         <p>{{ bb.published|date:"d.m.Y H:i:s"}}</p>
     </div>
     {% endfor %}
