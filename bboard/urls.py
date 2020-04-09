@@ -1,9 +1,11 @@
 from django.urls import path
-from .views import index, by_rubric  # последнее
+from .views import index, by_rubric
 from . import views
+from  .views import BbCreateView
 
 
 urlpatterns = [
-    path('<int:rubric_id>/', by_rubric, name='by_rubric'),  # последний
+    path('add/', BbCreateView.as_view(), name='add'),
+    path('<int:rubric_id>/', by_rubric, name='by_rubric'),
     path('', views.index, name='index'),
 ]
