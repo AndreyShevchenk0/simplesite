@@ -5,8 +5,8 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from.models import Bb
-from .models import Rubric
-from .forms import Bbform
+from.models import Rubric
+from.forms import Bbform
 
 
 def index(request):
