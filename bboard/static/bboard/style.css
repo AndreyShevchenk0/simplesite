@@ -1,20 +1,99 @@
-header h2{
+/*@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Times New Roman',sans-serif;
+}
+
+body{
+
+}
+*/
+
+
+header h1{
     font-size: 40px;
     text-transform: uppercase;
     text-align: center;
-    background: url("bg.jpg") left/auto 100% no-repeat;
+    background: #d9f6d2;
+    color: #000;
 }
 
 nav {
-    font-size: 16px;
-    width: 150px;
-    float: left;
+    padding: 0;
+    margin: 0;
+    background: #f0f2f8;  /* серий цвет */
+    padding-top: 20px;  /* сдвигаем  вниз на 20 px от верхнего края*/
+    padding-bottom: 20px;   /* сдвигаем  вверх  на 20 px от нижнего края*/
+    /**/
+    display: flex;/*вистраиваем елементи хедера нав в строку*/
+    padding-left: 3%;/*отступи от  левого края  на 3%*/
+    padding-right: 3%;  /*отступи от правого края  на 3%*/
+    align-items: center;/*текст стает в центре блока от краев верха и низа*/
+    letter-spacing: 0.5px;  /* интервал между символ.в елементе*/
+    justify-content: space-between;  /* Распределенное выравнивание Всех названий */
+    align-items: center;  /* Центрировать элементы в поперечной оси */
 }
 nav a{
     display: block;
     margin: 10px 0px;
+    color: #000;  /* цвет текста  Рубрик */
 }
 
 section{
-    margin-left: 170px;
+    margin-left: 400px;  /* отступ на 400 px от левого края */
+}
+
+.active{
+    color: red;  /* цвет текста форми добавления */
+}
+
+ /* Footer */
+.footer{
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    top: 50px;  /* отступ футера от обьявлений */
+    text-align: center;
+    background: #b8e4ad;
+}
+
+.icons{  /*ГОРИЗОНТАЛЬНОЕ ВИРАВНИВАНИЕ*/
+    display: flex;  /* виравневает весь текст в одну минию */
+    justify-content: space-between;  /* Распределенное выравнивание  по горизонтали */
+    align-items: center;  /* Центрировать элементы в поперечной оси */
+    padding: 30px 0;  /* отступ в низ и верх */
+}
+.icons .sci,.icons .controls{
+    position: relative;
+    top: 0px; /* иконки вниз сам напис. */
+    display: flex;
+}
+
+.icons .sci li{
+    list-style: none;
+    margin-right: 30px;
+}
+
+.icons .sci li img{
+    display: inline-block;
+    max-width: 24px;
+    transition: 0.5s ease-in-out;
+}
+
+.icons .sci li:hover img{
+    transform: translateY(-10px);
+}
+
+.icons .controls li{
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.5s ease-in-out;
+}
+
+.icons .controls li:hover{
+    opacity: 0.5;
 }
