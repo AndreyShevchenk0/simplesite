@@ -1,4 +1,3 @@
-#from django.shortcuts import render  # бил тут етот код
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
